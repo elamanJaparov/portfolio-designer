@@ -1,6 +1,10 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
@@ -124,13 +128,18 @@ img {
   width: 100%;
 }
 
+.burger-menu {
+  display: none;
+}
+
 /* Welcome Section */
+.welcome {
+  margin-top: 160px;
+}
 .welcome .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin-top: 160px;
 }
 
 .welcome__title {
@@ -280,6 +289,7 @@ img {
 
 .contact__text {
   font-size: 26px;
+  margin: 0;
   margin-bottom: 50px;
 }
 
@@ -309,8 +319,192 @@ img {
   align-items: center;
   gap: 40px;
   padding: 0;
+  margin: 0;
+}
+
+.socials__link:hover {
+  transition: opacity 0.3s;
+  opacity: 0.7;
 }
 
 .socials__img {
   display: flex;
+}
+
+@media (max-width: 1100px) {
+  .welcome__img {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .welcome {
+    margin-top: 70px;
+  }
+  .welcome .container {
+    flex-direction: column-reverse;
+    gap: 65px;
+  }
+
+  .welcome__desc {
+    text-align: center;
+  }
+
+  .welcome__title {
+    width: auto;
+  }
+
+  .welcome__text {
+    width: auto;
+    margin-bottom: 50px;
+  }
+
+  .work {
+    height: 600px;
+  }
+
+  .work__name {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 850px) {
+  .projects__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .works, .projects, .contact {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 770px) {
+  .welcome__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 770px) {
+  .footer .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .works__wrapper {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .work:nth-child(odd) {
+    margin-top: 0;
+  }
+
+  .projects__img {
+    width: 100%;
+    height: 360px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .burger-menu {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 29px;
+    right: 15px;
+  }
+
+  .burger-menu__icon {
+    width: 30px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .header.header--mobile .nav {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  
+  .header.header--mobile .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+    padding: 0;
+  }
+
+
+  .header.header--mobile .container {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-template: 20px;
+  }
+  
+  .welcome__img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .welcome__text {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 16px 20px;
+  }
+
+  .works__btn {
+    margin-bottom: 40px;
+  }
+
+  .work__name {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .projects--title {
+    margin-bottom: 35px;
+  }
+
+  .contact {
+    margin-bottom: 100px;
+  }
+
+  .contact .container {
+    max-width: 270px;
+  }
+
+  .contact__title {
+    margin-bottom: 12px;
+  }
+
+  .contact__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .welcome__title {
+    font-size: 26px;
+  }
 }
